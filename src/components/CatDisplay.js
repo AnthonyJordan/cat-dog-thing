@@ -2,13 +2,13 @@ import {useState, useEffect} from "react";
 
 function CatDisplay(){
     const [catImage, setCatImage]= useState("")
-    let animeQuote={}
+    const [animeQuote, setAnimeQuote] =useState({})
     useEffect(()=>fetchData(),[])
 
     function fetchData(){
         fetch('https://animechan.vercel.app/api/random')
         .then(response => response.json())
-        .then(quote => animeQuote = quote)
+        .then(quote => setAnimeQuote(quote))
         fetch("https://cataas.com/cat?json=true").then(r=>r.json()).then(cat => setCatImage(`https://cataas.com${cat.url}`))
     }
     return(

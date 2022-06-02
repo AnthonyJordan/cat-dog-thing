@@ -3,15 +3,16 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 import NavBar from './components/NavBar';
 import CatDisplay from './components/CatDisplay';
+import Home from './components/Home';
 
 
 function App() {
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar />
       <Switch>
         <Route exact path="/">
-          home
+          <Home />
         </Route>
         <Route exact path="/cats">
           <CatDisplay />
@@ -20,7 +21,6 @@ function App() {
           Dogs
         </Route>
       </Switch>
-
       Comments
     </div>
   );
