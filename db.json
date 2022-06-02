@@ -1,19 +1,29 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
   "comments": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "comment": "This is absolutely hilarious",
+      "name": "DJ"
+    },
+    {
+      "id": 2,
+      "comment": "I've never hated anything more!",
+      "name": "Jimmy"
+    },
+    {
+      "id": 3,
+      "comment": "Can I pls pet?!",
+      "name": "Anon"
+    },
+    {
+      "id": 4,
+      "comment": "LOL!",
+      "name": "Miranda"
+    },
+    {
+      "comment": "Cat's rule and dogs drool!",
+      "name": "Anthony",
+      "id": 5
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: coral;
+  padding: 15px;
+}
+.navButton{
+  background-color: rgb(190, 140, 237);
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  padding:8px;
+  border-radius: 25%;
+  font-weight: bold;
+}
+.active{
+  background-color: aqua;
+}
