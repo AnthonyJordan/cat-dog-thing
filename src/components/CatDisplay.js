@@ -12,13 +12,13 @@ function CatDisplay(){
         fetch("https://cataas.com/cat?json=true").then(r=>r.json()).then(cat => setCatImage(`https://cataas.com${cat.url}`))
     }
     return(
-        <div>
+        <div className="display">
             <img src={catImage} alt="cat"></img>
-            <div>
+            <div className="quote">
                 <h3>{animeQuote.quote}</h3>
-                <p>{animeQuote.character}</p>
+                <p style={{textAlign:"center"}}>-{animeQuote.character}</p>
             </div>
-            <button onClick={fetchData}>New Cat!</button>
+            <button className="button" onClick={fetchData}>New Cat!</button>
         </div>
     )
 }

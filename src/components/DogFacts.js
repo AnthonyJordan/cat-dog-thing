@@ -18,14 +18,14 @@ function DogFact() {
    }
 
     return (
-        <div>
+        <div className='display'>
             <h2>'Sick Random Dog Facts!!</h2>
             <img src={dogImage} alt="dog"/>
-            <p>
+            <p className='quote'>
                 {dogFact}
             </p>
-            <button onClick={() => setLike(!like)}> {like ? "Like" : "Dislike"}</button>
-            <button onClick={fetchData}>New Dog!</button>
+            <button className="button" onClick={() => setLike(!like)}> {like ? "Like" : "Dislike"}</button>
+            <button className="button" onClick={fetchData}>New Dog!</button>
         </div>
     )
 }
