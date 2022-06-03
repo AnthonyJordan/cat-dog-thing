@@ -13,6 +13,9 @@ function CommentForm({handleSubmitNewComment}) {
 
     const handleSubmitComment = (e) => {
         e.preventDefault();
+        if(newComment.name === "" || newComment.comment === ""){
+            return
+        }
         fetch("http://localhost:3000/comments", {
             method: 'POST',
             headers: {
@@ -27,11 +30,13 @@ function CommentForm({handleSubmitNewComment}) {
     }
 
     return (
-        <form className="new-comment-form" onSubmit={handleSubmitComment}>
-            <input placeholder="comment" name="comment" onChange={handleNewComment} value={newComment.comment} />
-            <input placeholder="name" name="name" onChange={handleNewComment} value={newComment.name} />
-            <input type="submit" value="Leave us your comments!" />
-        </form>
+        <div className="form">
+            <form onSubmit={handleSubmitComment}>
+                <input placeholder="comment" name="comment" onChange={handleNewComment} value={newComment.comment} />
+                <input placeholder="name" name="name" onChange={handleNewComment} value={newComment.name} />
+                <input type="submit" value="Leave us your comments!" />
+            </form>
+        </div>
     )
 }
 

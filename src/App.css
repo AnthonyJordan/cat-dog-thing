@@ -91,3 +91,28 @@ img{
   padding: 10px;
   margin: 5px;
 }
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  top: 50px;
+}
+
+.comments {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: yellow;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  top: 50px;
+  bottom: 50px;
+}

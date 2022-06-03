@@ -9,6 +9,7 @@ function DogFact() {
 
 
    function fetchData(){
+    setLike(true)
     fetch('https://dog-api.kinduff.com/api/facts',)
             .then((res) => res.json())
             .then((fact) => setDogFact(fact.facts));

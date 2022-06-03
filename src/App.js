@@ -23,6 +23,11 @@ function App() {
     const updatedComments = [...commentList, newComment]
     setCommentList(updatedComments)
   }
+
+  function deleteComment(id){
+    const updatedComments = commentList.filter((comment) => comment.id !==id);
+    setCommentList(updatedComments);
+  }
   return (
     <div>
       <NavBar />
@@ -37,7 +42,7 @@ function App() {
           <DogFact />
         </Route>
       </Switch>
-      <CommentContainer commentList={commentList}/>
+      <CommentContainer commentList={commentList} onCommentDelete={deleteComment}/>
       <CommentForm handleSubmitNewComment={addNewComment}/>
     </div>
   );
